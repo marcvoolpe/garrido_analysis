@@ -67,8 +67,6 @@ def comprehension_stacked_barchart(df: pd.DataFrame):
     print(f"Comprehension barchart saved: {output_path}")
 
 
-# Filter by class_a first, then by baseline
-
 def num_of_decisions_by_class(df: pd.DataFrame):
 
     df_managers = df[df[COLS['is_manager']]]
