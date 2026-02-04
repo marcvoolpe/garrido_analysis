@@ -70,9 +70,10 @@ def comprehension_stacked_barchart(df: pd.DataFrame):
 def num_of_decisions_by_class(df: pd.DataFrame):
 
     df_managers = df[df[COLS['is_manager']]]
+    passed_comprehension = df_managers[(df_managers[COLS['comprehension_mistakes']] <= 3)]
 
     for c in CLASSES:
-        data = df_managers[df_managers[COLS['product_class']] == c]
+        data = passed_comprehension[passed_comprehension[COLS['product_class']] == c]
         
         baseline_1 = data[data['session.config.baseline'] == 1][COLS['second_mover_choice']]
         baseline_0 = data[data['session.config.baseline'] == 0][COLS['second_mover_choice']]
