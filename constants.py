@@ -23,7 +23,7 @@ TN = [
     '12_A_Retailer_First_Human'
 ]
 
-PATH = "data/all_apps_wide_2026-02-04.csv"
+PATH = "data/all_apps_wide_2026-02-05.csv"
 
 CLASSES = ['A', 'B', 'C']
 SUPERIOR = {'A': 'A',
