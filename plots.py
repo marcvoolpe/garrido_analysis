@@ -75,8 +75,8 @@ def num_of_decisions_by_class(df: pd.DataFrame):
     for c in CLASSES:
         data = passed_comprehension[passed_comprehension[COLS['product_class']] == c]
         
-        baseline_1 = data[data['session.config.baseline'] == 1][COLS['second_mover_choice']]
-        baseline_0 = data[data['session.config.baseline'] == 0][COLS['second_mover_choice']]
+        baseline_1 = data[data['session.config.baseline'] == 1][COLS['choice']]
+        baseline_0 = data[data['session.config.baseline'] == 0][COLS['choice']]
 
         # Get value counts and align indices
         baseline_1_counts = baseline_1.value_counts().sort_index()
